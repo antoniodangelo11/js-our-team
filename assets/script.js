@@ -75,7 +75,12 @@ for (let key of arrTeam) {
 // 	eleContainer.innerHTML = '';
 // 	for (let i = 0; i < arrTeam.length; i++) {
 //         let objTeam = arrTeam[i];
-//         eleContainer.innerHTML += `<li>Nome membro: ${objTeam.memberName} Ruolo: ${objTeam.memberRole} Foto: ${objTeam.memberPic}</li>`;
+//         eleContainer.innerHTML += 
+//         `<div class= "col-12 col-md-6 col-lg-4 py-2"> 
+//             <div class= "text-center bg-light">${key.memberPic}</div> 
+//             <div class= "text-danger">${key.memberName}</div> 
+//             <div class= "fw-bold">${key.memberRole}</div> 
+//          </div>`;
 //     }
 // }
 
