@@ -18,44 +18,40 @@ const arrTeam = [
     {
         memberName: 'Wayne Barnett',
         memberRole: 'Founder & CEO',
-        memberPic: 'wayne-barnett-founder-ceo.jpg',
+        memberPic: `<img class= "w-100" src="img/wayne-barnett-founder-ceo.jpg"`,
     },
     {
         memberName: 'Angela Caroll',
         memberRole: 'Chief Editor',
-        memberPic: 'angela-caroll-chief-editor.jpg',
+        memberPic: `<img class= "w-100" src="img/angela-caroll-chief-editor.jpg"`,
     },
     {
         memberName: 'Walter Gordon',
         memberRole: 'Office Manager',
-        memberPic: 'walter-gordon-office-manager.jpg',
+        memberPic: `<img class= "w-100" src="img/walter-gordon-office-manager.jpg"`,
     },
     {
         memberName: 'Angela Lopez',
         memberRole: 'Social Media Manager',
-        memberPic: 'angela-lopez-social-media-manager.jpg',
+        memberPic: `<img class= "w-100" src="img/angela-lopez-social-media-manager.jpg"`,
     },
     {
         memberName: 'Scott Estrada',
         memberRole: 'Developer',
-        memberPic: 'scott-estrada-developer.jpg',
+        memberPic: `<img class= "w-100" src="img/scott-estrada-developer.jpg"`,
     },
     {
         memberName: 'Barbara Ramos',
         memberRole: 'Graphic Designer',
-        memberPic: 'barbara-ramos-graphic-designer.jpg',
+        memberPic: `<img class= "w-100" src="img/barbara-ramos-graphic-designer.jpg"`,
     },
 ];
 
 // STAMPO L'ARRAY SU CONSOLE
-// console.log(arrTeam);
+console.log(arrTeam);
 
 // STAMPO L'ARRAY SUL DOM
 const eleListTeam = document.querySelector('#list_team');
-
-// const eleName = document.querySelector('member_name');
-// const eleRole = document.querySelector('member_role');
-// const elePic = document.querySelector('member_pic');
 
 // SOLUZIONE CON FUNZIONE#
 // printList(arrTeam, eleListTeam);
@@ -63,9 +59,14 @@ const eleListTeam = document.querySelector('#list_team');
 
 // SOLUZIONE CON KEY
 for (let key of arrTeam) {
-	// key = 'una delle chiavi di palla';
+	// key = è una delle chiavi di arrTeam
 	console.log(key);
-    eleListTeam.innerHTML += `<li>Nome membro: ${key.memberName} Ruolo: ${key.memberRole} Foto: ${key.memberPic}</li>`;
+    eleListTeam.innerHTML += 
+    `<div class= "col-12 col-md-6 col-lg-4 py-2"> 
+        <div class= "text-center bg-light">${key.memberPic}</div> 
+        <div class= "text-danger">${key.memberName}</div> 
+        <div class= "fw-bold">${key.memberRole}</div> 
+    </div>`;
 }
 
 // SOLUZIONE CON FUNZIONE#
