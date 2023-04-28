@@ -13,6 +13,7 @@ BONUS 2:
 Organizzare i singoli membri in card/schede (se non avete idee prendete spunto dallo screenshot)
 */
 
+// ARRAY CON GLI OGGETTI
 const arrTeam = [
     {
         memberName: 'Wayne Barnett',
@@ -44,7 +45,27 @@ const arrTeam = [
         memberRole: 'Graphic Designer',
         memberPic: 'barbara-ramos-graphic-designer.jpg',
     },
-
 ];
 
+// STAMPO L'ARRAY SU CONSOLE
 console.log(arrTeam);
+
+// STAMPO L'ARRAY SUL DOM
+const eleListTeam = document.querySelector('#list_team');
+
+// const eleName = document.querySelector('member_name');
+// const eleRole = document.querySelector('member_role');
+// const elePic = document.querySelector('member_pic');
+
+printList(arrTeam, eleListTeam);
+
+
+/*FUNZIONI*/
+
+function printList(arrTeam, eleContainer) {
+	eleContainer.innerHTML = '';
+	for (let i = 0; i < arrTeam.length; i++) {
+        let objTeam = arrTeam[i];
+        eleContainer.innerHTML += `<li>Nome membro: ${objTeam.memberName} Ruolo: ${objTeam.memberRole} Foto: ${objTeam.memberPic}</li>`;
+    }
+}
