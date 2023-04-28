@@ -48,7 +48,7 @@ const arrTeam = [
 ];
 
 // STAMPO L'ARRAY SU CONSOLE
-console.log(arrTeam);
+// console.log(arrTeam);
 
 // STAMPO L'ARRAY SUL DOM
 const eleListTeam = document.querySelector('#list_team');
@@ -57,15 +57,24 @@ const eleListTeam = document.querySelector('#list_team');
 // const eleRole = document.querySelector('member_role');
 // const elePic = document.querySelector('member_pic');
 
-printList(arrTeam, eleListTeam);
+// SOLUZIONE CON FUNZIONE#
+// printList(arrTeam, eleListTeam);
 
 
-/*FUNZIONI*/
-
-function printList(arrTeam, eleContainer) {
-	eleContainer.innerHTML = '';
-	for (let i = 0; i < arrTeam.length; i++) {
-        let objTeam = arrTeam[i];
-        eleContainer.innerHTML += `<li>Nome membro: ${objTeam.memberName} Ruolo: ${objTeam.memberRole} Foto: ${objTeam.memberPic}</li>`;
-    }
+// SOLUZIONE CON KEY
+for (let key of arrTeam) {
+	// key = 'una delle chiavi di palla';
+	console.log(key);
+    eleListTeam.innerHTML += `<li>Nome membro: ${key.memberName} Ruolo: ${key.memberRole} Foto: ${key.memberPic}</li>`;
 }
+
+// SOLUZIONE CON FUNZIONE#
+
+// function printList(arrTeam, eleContainer) {
+// 	eleContainer.innerHTML = '';
+// 	for (let i = 0; i < arrTeam.length; i++) {
+//         let objTeam = arrTeam[i];
+//         eleContainer.innerHTML += `<li>Nome membro: ${objTeam.memberName} Ruolo: ${objTeam.memberRole} Foto: ${objTeam.memberPic}</li>`;
+//     }
+// }
+
